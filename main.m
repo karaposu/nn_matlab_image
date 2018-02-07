@@ -1,7 +1,7 @@
 %% close all, clear all, clc
 close all, clear all, clc
 
-%% MULT›PLE READ FOR IMAGES
+%% MULT√ùPLE READ FOR IMAGES
 
 Input_folder = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\yatay'; % folder with big images
 Input_folder_h = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\dikey'; % folder with big images
