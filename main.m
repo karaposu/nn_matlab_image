@@ -1,11 +1,11 @@
 %% close all, clear all, clc
 close all, clear all, clc
 
-%% MULTÝPLE READ FOR IMAGES
+%% MULTIPLE READ FOR IMAGES
 
-Input_folder = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\yatay'; % folder with big images
-Input_folder_h = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\dikey'; % folder with big images
-test_folder = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\test'; % folder with big images
+Input_folder = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\yatay'; % folder with horizantal images
+Input_folder_h = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\dikey'; % folder with vertical images
+test_folder = 'C:\Users\enesk\Desktop\w-s\nn-matlab\50piksel\test'; % folder with test images(used at last)
 
 
 
@@ -14,7 +14,7 @@ files_v = dir(fullfile(Input_folder));
 files_t= dir(fullfile(test_folder));
 
 
-for  i=3:17
+for  i=3:17 % directories first 2 values are ". " and ".." so we start from 3 
 
 Picture_horizantal{i-2}=imread(char(join( (Input_folder)+"\"+files_v(i).name ) ) );
 Picture_vertical{i-2}=  imread(char(join( (Input_folder_h)+"\"+files_h(i).name ) ) );
@@ -103,7 +103,7 @@ end
 
 %train_target=ones(1,15);
 
-train_target=[ 0 0 0 0 0  0 0 0 0 0   0 0 0 0 0  1 1 1 1 1  1 1 1 1 1  1 1 1 1 1 ] ;
+train_target=[ 0 0 0 0 0  0 0 0 0 0   0 0 0 0 0  1 1 1 1 1  1 1 1 1 1  1 1 1 1 1 ] ;  % first 15 vertical is 0  , last 15 is horizantal and equals 1 
 
 
 %nnd12sd1
